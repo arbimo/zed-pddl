@@ -1,0 +1,53 @@
+[
+  {
+    "label": "Parse PDDL problem",
+    "command": "ape",
+    "args": ["parse", "${ZED_FILE}"],
+    "env": {},
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "no_focus",
+    "reveal_target": "dock",
+    "hide": "never",
+    "shell": "system",
+    "tags": []
+  },
+  {
+    "label": "Parse PDDL domain",
+    "command": "ape",
+    "args": ["parse-domain", "${ZED_FILE}"],
+    "env": {},
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "no_focus",
+    "reveal_target": "dock",
+    "hide": "never",
+    "shell": "system",
+    "tags": []
+  },
+  {
+    "label": "Solve PDDL",
+    "command": "up",
+    "args": ["oneshot-planning", "--pddl", "`ape find-domain \"${ZED_FILE}\"`", "${ZED_FILE}"],
+    "env": {},
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "no_focus",
+    "reveal_target": "dock",
+    "hide": "never",
+    "shell": "system",
+    "tags": []
+  },
+  {
+    "label": "Open PDDL domain",
+    "command": "zed `ape find-domain \"${ZED_FILE}\"`",
+    "env": {},
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "no_focus",
+    "reveal_target": "dock",
+    "hide": "on_success",
+    "shell": "system",
+    "tags": []
+  }
+]
