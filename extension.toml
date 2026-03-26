@@ -1,0 +1,11 @@
+id = "zed-pddl"
+name = "PDDL"
+version = "0.0.1"
+schema_version = 1
+description = "PDDL language support for Zed"
+authors = ["Arthur Bit-Monnot <abitmonnot@laas.fr>"]
+repository = "https://github.com/arbimo/zed-pddl"
+
+[grammars.pddl]
+repository = "https://github.com/arbimo/tree-sitter-pddl"
+rev = "55ae8d4e73927c6a1a70a037c01ca4964009cda7"

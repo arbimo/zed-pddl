@@ -1,0 +1,4 @@
+name = "PDDL"
+grammar = "pddl"
+path_suffixes = ["pddl", "hddl"]
+line_comments = ["; "]
