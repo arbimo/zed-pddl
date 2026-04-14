@@ -2,3 +2,7 @@ name = "PDDL"
 grammar = "pddl"
 path_suffixes = ["pddl", "hddl"]
 line_comments = ["; "]
+autoclose_before = ";) \n\t\""
+brackets = [
+    { start = "(", end = ")", close = true, newline = true },
+]
