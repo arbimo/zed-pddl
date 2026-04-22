@@ -8,4 +8,4 @@ repository = "https://github.com/arbimo/zed-pddl"
 
 [grammars.pddl]
 repository = "https://github.com/arbimo/tree-sitter-pddl"
-rev = "55ae8d4e73927c6a1a70a037c01ca4964009cda7"
+rev = "02340847b03ce844c08638d5743e4ccd290468aa"

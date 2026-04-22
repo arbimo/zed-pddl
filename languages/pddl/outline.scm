@@ -9,10 +9,6 @@
         ":method"
         )
     ) @item
-;
-; pick up actions in the outline. Note that the difference in handling is due to the very limited tree-sitted grammar (that only recognizes action and not durative ones)
-; TODO: we should probably just remove the action-specific handling in the tree-sitter syntax
-(action . ":action" @context . (ident) @name) @item
 
 
 ; identify sections of the file: any list that starts with a keyword (except for actions... that do not define a section but a single item)
@@ -25,7 +21,7 @@
         )
     ) @item
 
-; Identitifies items X Y of the form (:section (X ...) (Y ..))
+; Identifies items X Y of the form (:section (X ...) (Y ..))
 ; used for predicates
 ((keyword) @_section
     (_)*
@@ -36,7 +32,7 @@
         )
     )
 
-; Identitifies items X Y of the form (:section X  Y ...)
+; Identifies items X Y of the form (:section X  Y ...)
 ; used for types
 ((keyword) @_section
     (_)*
